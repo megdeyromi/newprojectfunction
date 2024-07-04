@@ -1,2 +1,4 @@
 fdk
+cohere
+scikit-learn
 langchain-community

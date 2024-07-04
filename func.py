@@ -4,13 +4,17 @@
 # Copyright (c) 2020 Oracle, Inc.  All rights reserved.
 # Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
 #
-
 import io
 import json
-
+import os
+import cohere
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
+import time
 from fdk import response
 
-from langchain_community.llms.oci_generative_ai import OCIGenAI
+
+#from langchain_community.llms.oci_generative_ai import OCIGenAI
 def handler(ctx, data: io.BytesIO=None):
     print("Entering Python Hello World handler", flush=True)
     name = "World"

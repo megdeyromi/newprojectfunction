@@ -7,11 +7,10 @@
 
 import io
 import json
-from langchain_community.llms.oci_generative_ai import OCIGenAI
 
 from fdk import response
 
-
+from langchain_community.llms.oci_generative_ai import OCIGenAI
 def handler(ctx, data: io.BytesIO=None):
     print("Entering Python Hello World handler", flush=True)
     name = "World"

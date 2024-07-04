@@ -1,2 +1,2 @@
 fdk
-langchain_community
+langchain-community

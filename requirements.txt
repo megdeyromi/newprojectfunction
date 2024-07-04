@@ -1,0 +1,2 @@
+fdk
+langchain_community

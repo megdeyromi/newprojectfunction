@@ -7,7 +7,7 @@
 import io
 import json
 from fdk import response
-
+import cohere
 
 #from langchain_community.llms.oci_generative_ai import OCIGenAI
 def handler(ctx, data: io.BytesIO=None):

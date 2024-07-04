@@ -8,10 +8,16 @@ import io
 import json
 from fdk import response
 import cohere
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
+import time
 
+from langchain_community.embeddings import CohereEmbeddings
 #from langchain_community.llms.oci_generative_ai import OCIGenAI
 def handler(ctx, data: io.BytesIO=None):
     print("Entering Python Hello World handler", flush=True)
+    cohere_api_key = "TX8xfSGQm7btpYjQBrf3qYHyo7M9gAXtGrp2kJtT"
+    co = cohere.Client(cohere_api_key)
     name = "World"
     try:
         body = json.loads(data.getvalue())

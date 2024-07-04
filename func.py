@@ -6,11 +6,6 @@
 #
 import io
 import json
-import os
-import cohere
-from sklearn.metrics.pairwise import cosine_similarity
-import numpy as np
-import time
 from fdk import response
 
 
